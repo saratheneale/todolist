@@ -4,6 +4,8 @@ var Project = {
 	duedate:"",
 	name:"Unnamed Pro",
 	priority:3,
+	done:false,
+	irrelevant,false,
 	alarms:[], //array of Alarm Objects
 	children:[] //array of child objects such as Projects, Tasks, and/or Notes  
 }
@@ -14,12 +16,16 @@ var task = {
 	duedate:"",
 	name:"Unnamed Pro",
 	priority:3,
+	done:false,
+	irrelevant,false,
 	alarms:[], //array of Alarm Objects
 	children:[] //array of Notes
 }
 
 var note = {
 	id:0,  
+	done:false,
+	irrelevant,false,
 	text:""
 }
 
