@@ -1,0 +1,23 @@
+Project idea:
+Create a multi-user TODO list organizer.
+
+Key features:
+* Support the notion of Projects->Tasks_Within_Each_Project
+* Support infinite Notes on any Project or Task
+* Support start/end datetimes for any Project or Task
+* Be able to delete a Note/Task/Project and/or mark it as "Done" or
+* "Irrelevant".
+* Be able to set a priority on a Note/Task/Project.
+* Accessible over HTTP(S) or SSH
+* Well-defined backend storage format, so alternative implementations can be
+* written
+* Access control for Projects/Tasks.
+* The Client shall cache key fingerprint on first connect and warn if it
+* changes later
+* (Todo later) Interrelated Projects/Tasks, with shared Tasks
+* (Todo later) Give RO or RW access to Projects/Tasks to other users
+
+Inspiration:
+The few pieces of TODO list software in my package manager are pretty reasonable, but they only sync with Google Calendar. 
+GCal's idea of a TODO list doesn't at all match what anyone would reasonably expect from a full-featured TODO list... 
+so the TODO list software is pretty crippled by the impedance mismatch.

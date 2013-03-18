@@ -1,0 +1,37 @@
+var Project = {
+	id:0,
+	startdate:"",
+	duedate:"",
+	name:"Unnamed Pro",
+	priority:3,
+	alarms:[], //array of Alarm Objects
+	children:[] //array of child objects such as Projects, Tasks, and/or Notes  
+}
+
+var task = {
+	id:0,
+	startdate:"",
+	duedate:"",
+	name:"Unnamed Pro",
+	priority:3,
+	alarms:[], //array of Alarm Objects
+	children:[] //array of Notes
+}
+
+var note = {
+	id:0,  
+	text:""
+}
+
+var alarm = {
+	id:0,
+	name:"alarm",
+	type:"absolute", //can also be relative
+	date:"",
+	description:[]//array of Notes
+}
+
+var versionNumber={
+	number:0.0
+}
+

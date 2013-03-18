@@ -1,0 +1,32 @@
+How does Client expect Server behavior?
+
+-Know when I delete a task, project (=Object)
+-when added Object. 
+-When Objects (or object data) changes. (e.g. When due dates change, when
+	task is marked as done, etc)
+-push data to all open clients when there's change or when client initially
+	connects.
+-know the latest state of the data and refuse modifications from clients without the 
+	latest data. (i.e. Server will have version number of data). 
+-acknowledge latest modifications and send version number. 
+
+
+
+
+Structure of Object
+
+Projects:
+	start date - 1
+	due date -1
+	Name - 1
+	priority - 1
+	alarms/reminders- time with optional message. 0-N 
+		absolute time alarms
+		relative time alarms (eg relative to due date, or another alarm etc)
+	child objects 0-N
+		tasks, notes, other projects
+Tasks:
+	Identical to Projects except that notes are the only valid child objects
+Notes:
+	free form text
+
