@@ -32,7 +32,13 @@ var dataStore = {
   alarms: [],
   notes: []
 };
-function main (){
+
+//We want to start the Node toDoList server iff we are running in Node.
+if(typeof require !== "undefined") {
+  main();
+}
+
+function main () {
   var net = require('net');
   var server = net.createServer({allowHalfOpen: true}, listener);
   server.listen(8124, "::");
