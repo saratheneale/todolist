@@ -97,7 +97,7 @@ function clientData(conn, data) {
     log(e, getRemoteIpAndPort(conn));
     conn.write("ERROR " + e.toString());
   }
-};
+}
 
 function handleTransfer(conn, incomingData) {
   conn.write(JSON.stringify(dataStore));
@@ -129,10 +129,10 @@ function handleAdd(conn, incomingData) {
 function add(obj, datastoreObj) {
   if(typeof obj !== "undefined" && obj.length > 0) {
     for(var j = 0; j<obj.length;++j) {
-      var newItem = obj[j];
-      if(newItem.id===undefined) {
-        throw Error("INVALID_ITEM_ADD at index "+
-          j+" of array "+JSON.stringify(obj));
+      var item = obj[j];
+      if(item.id===undefined) {
+        throw Error("INVALID_ITEM_ADD at index " +
+          j + " of array " + JSON.stringify(obj));
       }
     }
     dataStore.revision++;
